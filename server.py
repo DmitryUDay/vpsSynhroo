@@ -1,81 +1,68 @@
-import smtplib
-from threading import Thread
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
-from flask import Flask, request, jsonify
-from flask_cors import CORS
+import json
+import os
+import uuid
+from flask import Flask, jsonify, render_template, request
 
 app = Flask(__name__)
-CORS(app)  # Разрешаем CORS-запросы с любого источника
 
-# Настройки Яндекс SMTP
-SMTP_SERVER = "smtp.yandex.ru"
-SMTP_PORT = 465
-SMTP_USER = "disiteStudioDigital@yandex.ru"
-SMTP_PASSWORD = "ookntxhkrqqzayrf"
+LEADS_FILE = "leads.json"
 
-def send_lead_email_async(lead_data):
-    """Отправка письма в фоновом потоке с таймаутом"""
+# Секретный роут для твоего дашборда
+SECRET_DASH_ROUTE = "/adminDahsPannelelele"
+
+
+def load_leads():
+    if not os.path.exists(LEADS_FILE):
+        return []
     try:
-        recipient = "disiteStudioDigital@yandex.ru"
-        subject = f"Новая заявка с сайта [{lead_data.get('idSites', 'disite')}]"
-
-        html_content = f"""
-        <!DOCTYPE html>
-        <html>
-        <head>
-            <meta charset="utf-8">
-        </head>
-        <body style="font-family: Arial, sans-serif; color: #333; line-height: 1.6;">
-            <h2 style="color: #2c3e50;">Привет! Тебе от DiSite новая заявка:</h2>
-            <div style="background-color: #f8f9fa; border-left: 4px solid #007bff; padding: 15px; margin: 15px 0;">
-                <p><strong>Метка сайта (idSites):</strong> {lead_data.get('idSites', 'disite')}</p>
-                <p><strong>Ключ доступа (access_key):</strong> {lead_data.get('access_key', 'не указан')}</p>
-                <hr style="border: 0; border-top: 1px solid #eee;">
-                <p><strong>Имя:</strong> <span style="font-size: 1.1em; color: #000;">{lead_data.get('name', 'Не указано')}</span></p>
-                <p><strong>Контакты (Телефон / TG / Email):</strong> <span style="font-size: 1.1em; color: #000;">{lead_data.get('contact', 'Не указано')}</span></p>
-                <p><strong>Пожелания к проекту:</strong></p>
-                <blockquote style="background: #fff; padding: 10px; border: 1px solid #ddd; margin: 5px 0;">
-                    <strong>{lead_data.get('message', 'Без пожеланий')}</strong>
-                </blockquote>
-            </div>
-            <p style="font-size: 0.8em; color: #777;">Заявка успешно обработана сервером UCloud 01.</p>
-        </body>
-        </html>
-        """
-
-        msg = MIMEMultipart("alternative")
-        msg["Subject"] = subject
-        msg["From"] = SMTP_USER
-        msg["To"] = recipient
-
-        msg.attach(MIMEText(html_content, "html", "utf-8"))
-
-        with smtplib.SMTP_SSL(SMTP_SERVER, SMTP_PORT, timeout=10) as server:
-            server.login(SMTP_USER, SMTP_PASSWORD)
-            server.sendmail(SMTP_USER, recipient, msg.as_string())
-        
-        print(f"[УСПЕХ] Заявка от {lead_data.get('name')} отправлена на почту!")
-    except Exception as e:
-        print(f"[ОШИБКА SMTP] Ошибка при отправке почты: {e}")
+        with open(LEADS_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return []
 
 
-@app.route('/lead', methods=['POST'])
+def save_leads(data):
+    with open(LEADS_FILE, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=4)
+
+
+# --- 1. ПРИЕМ ЗАЯВОК (Шлют лендосы) ---
+@app.route("/lead", methods=["POST"])
 def handle_lead():
     data = request.get_json()
-
     if not data:
-        return jsonify({"status": "error", "message": "Empty JSONchik"}), 400
+        return jsonify({"status": "error", "message": "Empty JSON"}), 400
 
-    Thread(target=send_lead_email_async, args=(data,)).start()
+    leads = load_leads()
+    data["id"] = str(uuid.uuid4())[:8]
+    leads.append(data)
+    save_leads(leads)
 
-    return jsonify({"status": "ok", "message": "SuccesFull"}), 200
+    print(
+        f"[БАЗА] Заявка от {data.get('name', 'Anon')} сохранена в {LEADS_FILE}!"
+    )
+    return jsonify({"status": "ok", "message": "Success"}), 200
 
 
-@app.route('/ping', methods=['GET', 'POST'])
+# --- 2. ТВОЯ СЕКРЕТНАЯ АДМИНКА ---
+@app.route(SECRET_DASH_ROUTE, methods=["GET"])
+def secret_dashboard():
+    return render_template("dash.html")
+
+
+# --- 3. АПИ ДЛЯ РЕНДЕРА ДАННЫХ ВНУТРИ АДМИНКИ ---
+@app.route("/api/getLeads", methods=["GET"])
+def get_leads_api():
+    leads = load_leads()
+    return jsonify({"status": "ok", "leads": leads}), 200
+
+
+# --- 4. ПИНГ ДЛЯ ПРОВЕРКИ ---
+@app.route("/ping", methods=["GET", "POST"])
 def ping():
     return jsonify({"status": "ok", "message": "Server is active"}), 200
 
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8000)
+if __name__ == "__main__":
+    # Слушаем локально, cloudflared сам перенаправит сюда трафик
+    app.run(host="127.0.0.1", port=8000)

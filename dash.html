@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>UOS Admin Panel</title>
+    <style>
+        body { background: #0d0d0d; color: #00ff66; font-family: monospace; padding: 20px; }
+        h1 { color: #fff; border-bottom: 1px solid #00ff66; padding-bottom: 10px; }
+        .card { background: #1a1a1a; border: 1px solid #333; border-left: 4px solid #00ff66; margin-bottom: 15px; padding: 15px; border-radius: 4px; }
+        .card h3 { margin-top: 0; color: #fff; }
+        .tag { background: #00ff66; color: #000; padding: 2px 6px; font-weight: bold; border-radius: 3px; font-size: 0.8em; }
+        blockquote { background: #111; border-left: 2px solid #555; margin: 10px 0; padding: 10px; color: #aaa; }
+    </style>
+</head>
+<body>
+    <h1>UOS SYSTEM DASHBOARD [HTTPS VIA CLOUDFLARE]</h1>
+    <div id="leads-container">Загрузка данных...</div>
+
+    <script>
+        async function loadLeads() {
+            try {
+                // Относительный путь — стучится прямо на api.kodariumlabs.space/api/getLeads
+                const res = await fetch('/api/getLeads');
+                const data = await res.json();
+
+                const container = document.getElementById('leads-container');
+                container.innerHTML = '';
+
+                if (!data.leads || data.leads.length === 0) {
+                    container.innerHTML = '<h3>Заявок нет. В системе тишина...</h3>';
+                    return;
+                }
+
+                data.leads.reverse().forEach(lead => {
+                    const card = document.createElement('div');
+                    card.className = 'card';
+                    card.innerHTML = `
+                        <h3>Заявка #${lead.id || 'N/A'} <span class="tag">${lead.idSites || 'disite'}</span></h3>
+                        <p><strong>Имя:</strong> ${lead.name || 'Не указано'}</p>
+                        <p><strong>Контакты:</strong> ${lead.contact || 'Не указано'}</p>
+                        <p><strong>Access Key:</strong> ${lead.access_key || 'N/A'}</p>
+                        <p><strong>Сообщение:</strong></p>
+                        <blockquote>${lead.message || 'Без пожеланий'}</blockquote>
+                    `;
+                    container.appendChild(card);
+                });
+            } catch (e) {
+                document.getElementById('leads-container').innerHTML = '<h3 style="color:red;">Ошибка связи с сервером!</h3>';
+            }
+        }
+
+        loadLeads();
+        // Автообновление раз в 5 секунд
+        setInterval(loadLeads, 5000);
+    </script>
+</body>
+</html>

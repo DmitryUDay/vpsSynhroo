@@ -1,0 +1,998 @@
+<!-- ДАЛБАЕБ ОБНОВИ ФУТЕР! -->
+<!-- ДАЛБАЕБ ОБНОВИ ФУТЕР! -->
+<!-- ДАЛБАЕБ ОБНОВИ ФУТЕР! -->
+<!-- ДАЛБАЕБ ОБНОВИ ФУТЕР! -->
+<!-- ДАЛБАЕБ ОБНОВИ ФУТЕР! -->
+<!-- ДАЛБАЕБ ОБНОВИ ФУТЕР! -->
+<!-- ДАЛБАЕБ ОБНОВИ ФУТЕР! -->
+<!-- ДАЛБАЕБ ОБНОВИ ФУТЕР! -->
+<!-- ДАЛБАЕБ ОБНОВИ ФУТЕР! -->
+<!-- ДАЛБАЕБ ОБНОВИ ФУТЕР! -->
+<!-- ДАЛБАЕБ ОБНОВИ ФУТЕР! -->
+<!-- ДАЛБАЕБ ОБНОВИ ФУТЕР! -->
+<!-- ДАЛБАЕБ ОБНОВИ ФУТЕР! -->
+<!-- ДАЛБАЕБ ОБНОВИ ФУТЕР! -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заказать сайт под ключ недорого — Веб-студия Disite</title>
+    <meta name="description" content="Студия Disite (проект UDay): качественное и быстрое создание сайтов под ключ для вашего бизнеса. Разработка от идеи до готового кода по доступным ценам. Узнайте стоимость!">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://disite-studio.pro/">
+    <meta property="og:title" content="Веб-студия Disite | От идеи — до кода, от Disite — до результата">
+    <meta property="og:description" content="Разработка сайтов под ключ для вашего бизнеса. Быстро, качественно и по доступным ценам. Создайте сайт, который приносит прибыль!">
+    <meta property="og:image" content="https://disite-studio.pro/mamka/preview.png">
+
+
+    <link rel="stylesheet" href="home.css"> <!-- Домашний стиль -->
+    <link rel="stylesheet" href="css/ModalRequizits.css"> <!-- Модалка реквизитов -->
+    <link rel="stylesheet" href="css/contactReport.css"> <!-- Модальное окно с заявкой -->
+    <link rel="stylesheet" href="css/tabliciaHome.css"><!-- Стиль таблиц цен -->
+    <link rel="stylesheet" href="css/homeAnimate.css"><!-- Анимации страницы -->
+    <link rel="stylesheet" href="css/helper.css"><!-- Стиль мастера настроек -->
+    <link rel="stylesheet" href="mandal.css"><!-- Окно ошибочной ссылки -->
+    <link rel="stylesheet" href="css/helpModal.css"><!-- Контактное окно помощи -->
+    <link rel="stylesheet" href="css/footer.css"><!-- Футер -->
+    <link rel="stylesheet" href="css/modalTarifee.css"><!-- Сас окно для подробностей о платных под. услугах -->
+    <link rel="stylesheet" href="css/defoult-header.css"><!-- Дуфолтный хедер -->
+    <link rel="stylesheet" href="css/modalSetupWizard.css"><!-- Стиль окна мастера настроек -->
+    <link rel="stylesheet" href="css/preLoader.css"><!-- Прелодер -->
+    <link rel="stylesheet" href="css/floatButton.css"><!-- Плавающие кнопки вверх и чат -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Основные favicon для браузеров -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://disite-studio.pro/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://disite-studio.pro/favicon-16x16.png">
+
+    <!-- Для Эплоидов (iPhone, iPad) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://disite-studio.pro/apple-touch-icon.png">
+
+    <!-- Для Ведроида -->
+    <link rel="icon" type="image/png" sizes="192x192" href="https://disite-studio.pro/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="https://disite-studio.pro/android-chrome-512x512.png">
+
+    <!-- Старый формат .ico -->
+    <link rel="shortcut icon" href="https://disite-studio.pro/favicon.ico" type="image/x-icon">
+
+    <!-- Манифест-->
+    <link rel="manifest" href="https://disite-studio.pro/site.webmanifest" crossorigin="anonymous">
+
+    <!-- Цвет темы браузера -->
+    <meta name="theme-color" content="#ffffff">
+    
+
+</head>
+<body>
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+    <!-- 1. ФАНТОМ (Идет первым в потоке, резервирует физическое место) -->
+    <div class="shapka shapka-phantom" aria-hidden="true">
+        <div class="burger">
+            <span></span><span></span><span></span>
+        </div>
+        <img src="mamka/exampleLogo.webp" alt="" width="10%">
+        <div class="selfs">
+            <a class="filling">Разработка сайтов</a>
+            <a class="filling">Облако UCloud</a>
+            <a class="filling">Помощь</a>
+        </div>
+        <div>
+            <div><div class="vib">Обсудить проект</div></div>
+        </div>
+    </div>
+
+    <!-- 2. НАСТОЯЩАЯ ФИКСИРОВАННАЯ ШАПКА (Летает сверху) -->
+    <div class="shapka shapka-fixed">
+        <div class="burger" id="burger">
+            <span></span><span></span><span></span>
+        </div>
+        <img src="mamka/exampleLogo.webp" alt="логотип disite" width="10%">
+        <div class="selfs">
+            <a href="index.html" class="filling">Разработка сайтов</a>
+            <a href="UCloudHost.html" class="filling">Облако UCloud</a>
+            <a onclick="openContactSphere(); return false;" class="filling">Помощь</a>
+        </div>
+        <div>
+            <a onclick="openLeadModal(); return false;">
+                <div class="vib">Обсудить проект</div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Мобильное меню -->
+    <div class="mobile-menu" id="mobileMenu">
+        <img src="mamka/exampleLogo.webp" alt="логотип disite">
+            <a href="index.html" class="filling" id="babaGapa"><img src="mamka/icons/site.webp" alt="" width="10%"><p>Разработка сайтов</p></a>
+            <a href="UCloudHost.html" class="filling"><img src="mamka/icons/UCloud.webp" alt="" width="10%"><p>Облако UCloud</p></a>
+            <!-- <a onclick="openWizard(); return false;" class="filling">Мастер настроек</a> -->
+            <a onclick="openContactSphere(); return false;" class="filling"><img src="mamka/icons/how.webp" alt="" width="10%"><p>Помощь</p></a>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    
+
+
+
+
+
+
+
+
+    <div class="bannerPrices">
+        <div class="blockSites">
+            <div class="Blockcontent">
+                <h1 id="matildochka" style="font-size: 30px; height: 80px;">
+                    Создаем сайты, которые <br><span class="typing-text">приносят прибыль бизнесу</span><span class="typing-cursor">|</span>
+                </h1>
+                <br>
+                <br>
+                <br>
+                <p style="font-size: 20px; color: #3b3b3b;">Переносим ваш бизнес в интернет: с современным дизайном и технологиями, которые работают на вас.</p>
+                <br>
+                <div class="preimuch">
+                    <span>Готовый сайт через 10 дней</span>
+                    <span>Всегда на связи</span>
+                    <span>Идеально на любых экранах</span>
+                    <span>Чистый код для поисковиков</span>
+                </div>
+
+                <br>
+                
+                <div>
+                    <a href="#pricee" class="buttonPrice1">Запустить сайт</a>
+                    <a href="#worder" class="buttonPrice2">Наши проекты</a>
+                </div>
+            </div>
+            <img src="mamka/aska.webp" alt="Постер disite" class="hero-image">
+
+        </div>
+    </div>
+    <br>
+    <br>
+    <div style="margin: 25px;" id="worder">
+        <h2 align="center">Сайты которые мы делали</h2>
+        <p align="center">Нам доверились уже 50+ предпринимателей, запустив свои сайты вместе с Disite.</p>
+    </div>
+
+    <div class="carousel">
+        <div class="carousel-track">
+            <div class="carousel-item">
+                <a href="https://zavalituning.ru/">
+                    <img src="mamka/p5.webp" alt="Сайт Автосервис">
+                    <p>Автосервис</p>
+                </a>
+            </div>
+            
+            
+            <div class="carousel-item">
+                <img src="mamka/p7.webp" alt="Сайт Салон красоты">
+                <p>Салон красоты</p>
+            </div>
+            
+            <div class="carousel-item">
+                <a href="https://rus-yazik.online">
+                    <img src="mamka/p8.webp" alt="Репетитор русский язык">
+                    <p>Репетитор русский язык</p>
+                </a>
+            </div>
+            
+            <div class="carousel-item">
+                <a href="https://mebel-uyut-vrn.online/">
+                    <img src="mamka/p9.webp" alt="Мебель на заказ">
+                    <p>Мебель на заказ</p>
+                </a>
+            </div>
+
+            <div class="carousel-item">
+                <img src="mamka/p4.webp" alt="Сайт Магазин обуви">
+                <p>Магазин обуви</p>
+            </div>
+            
+            <div class="carousel-item">
+                <img src="mamka/p6.webp" alt="Школьный сайт">
+                <p>Школьный сайт</p>
+            </div>
+
+
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <h2 align="center">Что входит в стоимость</h2>
+    <div class="magaga">
+
+        <div class="wrapper">
+            <div class="stolb1">
+                <div class="cardRandom" style="margin-bottom: 30px;">
+                    <h2>Поддержка сайта</h2>
+                    <div class="parrentRandom">
+                        <p>Не бросаем проекты: если понадобится обновить текст, добавить новые товары, заменить картинки или отредактировать страницу — сделаем всё быстро и без лишней бюрократии.</p>
+                        <img src="mamka/supports.webp" alt="поддержка на сайте">
+                    </div>
+                </div>
+                
+                <div class="cardRandom" style="background-color: #F2F4F7;">
+                    <h2>Полезные советы</h2>
+                    <div class="parrentRandom">
+                        <p><a href="https://t.me/saita_razrabotkaa" style="text-decoration: underline;">В нашем канале</a> публикуем простые гайды, честные инструкции и полезные фишки. Рассказываем, как устроен веб-дизайн, как работает код и как самостоятельно улучшать свой сайт без программистов.</p>
+                        <img src="mamka\tgChannel.webp" alt="полезные советы при заказе сайта">
+                    </div>
+                </div>
+            </div>
+
+            <div class="stolb2">
+                <div class="cardRandom" id="upupRandom">
+                    <h2>Логотип в подарок</h2>
+                    <div class="parrentRandom">
+                        <p>Если у вас еще нет фирменного стиля, бесплатно набросаем два сочных варианта логотипа под ваш новый сайт. Поможем выделиться с самого старта.</p>
+                        <img src="mamka/logoFree.webp" alt="создадим бесплатный логотип если у вас его нет">
+                    </div>
+                </div>
+
+                <div class="cardRandom" style="background-color: #F2F4F7;">
+                    <h2>Поможем настроить аналитику и поиск</h2>
+                    <div class="parrentRandom">
+                        <p>Подключим Яндекс Вебмастер и Google Search Console, чтобы ваш сайт правильно индексировался и быстрее появлялся в поиске. Вы сможете в реальном времени следить за просмотрами, кликами и ключевыми словами.</p>
+                        <img src="mamka/indexing.webp" alt="подключим индексацию от гугл и яндекса">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <div style="margin: 25px;" id="worder">
+        <h2 align="center">Этапы разработки</h2>
+        <p align="center">Показываем весь путь: от вашего «хочу сайт» до запуска готового проекта в сеть и первых клиентов.</p>
+    </div>
+
+
+    <div class="magaga">
+        <div class="accordion">
+            <div class="accordion-item">
+                <input type="checkbox" id="acc1">
+                <label class="accordion-label" for="acc1">
+                    <div class="accordion-icon">
+                        <img src="mamka/tablica/1.webp" alt="Иконка" />
+                    </div>
+                    <div class="accordion-text">Обсуждаем идею</div>
+                    <div class="accordion-arrow"></div>
+                </label>
+                <div class="accordion-content">
+                    <p>Вы пишите нам в мессенджер, и мы без душных брифов разбираем вашу задачу. Договариваемся на берегу о финальной цене, сроках и фиксируем, как должен выглядеть и работать сайт.</p>
+                </div>
+            </div>
+            <hr>
+
+            <div class="accordion-item">
+                <input type="checkbox" id="acc2">
+                <label class="accordion-label" for="acc2">
+                    <div class="accordion-icon">
+                        <img src="mamka/tablica/2.webp" alt="Иконка" />
+                    </div>
+                    <div class="accordion-text">Собираем контент</div>
+                    <div class="accordion-arrow"></div>
+                </label>
+                <div class="accordion-content">
+                    <p>Вам не придется мучиться с ТЗ. Мы сами вытащим из вас всю пользу: спросим про фишки вашего бизнеса, поможем собрать сочные фото, тексты и определимся с нужными кнопками.</p>
+                </div>
+            </div>
+            <hr>
+
+            <div class="accordion-item">
+                <input type="checkbox" id="acc3">
+                <label class="accordion-label" for="acc3">
+                    <div class="accordion-icon">
+                        <img src="mamka/tablica/3.webp" alt="Иконка" />
+                    </div>
+                    <div class="accordion-text">Утверждаем дизайн</div>
+                    <div class="accordion-arrow"></div>
+                </label>
+                <div class="accordion-content">
+                    <p>За 1–2 дня собираем визуальный макет. Вы сразу увидите, как будет выглядеть будущий сайт. Если всё пушка — двигаемся дальше. Если захочется что-то поменять — докручиваем до идеала.</p>
+                </div>
+            </div>
+            <hr>
+
+            <div class="accordion-item">
+                <input type="checkbox" id="acc4">
+                <label class="accordion-label" for="acc4">
+                    <div class="accordion-icon">
+                        <img src="mamka/tablica/4.webp" alt="Иконка" />
+                    </div>
+                    <div class="accordion-text">Собираем готовый сайт</div>
+                    <div class="accordion-arrow"></div>
+                </label>
+                <div class="accordion-content">
+                    <p>Переносим макет в чистый код. Оживляем кнопки, настраиваем ссылки и ювелирно дорабатываем верстку под экраны смартфонов. Вы сможете следить за магией в реальном времени по секретной тестовой ссылке.</p>
+                </div>
+            </div>
+            <hr>
+
+            <div class="accordion-item">
+                <input type="checkbox" id="acc5">
+                <label class="accordion-label" for="acc5">
+                    <div class="accordion-icon">
+                        <img src="mamka/tablica/5.webp" alt="Иконка" />
+                    </div>
+                    <div class="accordion-text">Оплата и финальный запуск</div>
+                    <div class="accordion-arrow"></div>
+                </label>
+                <div class="accordion-content">
+                    <p>Никаких скрытых платежей и предоплаты на честное слово. Условия запуска зависят от того, где будет жить ваш сайт:</p>
+                    <ul style="margin-top: 10px; padding-left: 20px;">
+                        <li><b>На нашем сервере:</b> Запускаем проект сразу по готовности. На оплату у вас есть 15 дней. Если платеж не поступает в этот срок, мы временно отключаем сайт и забираем домен.</li>
+                        <li><b>На вашем сервере:</b> Бережно переносим все файлы, настраиваем базу и запускаем сайт строго после полной оплаты.</li>
+                    </ul>
+                    <p style="margin-top: 10px; font-style: italic; color: #666;">Как только проект оплачен — вы становитесь его полноправным владельцем и получаете на руки абсолютно все доступы и ключи.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    
+    <div style="border: 1px solid #dfdfdf ; border-radius: 20px; padding-top: 20px; " id="pricee">
+        <div style="margin: 70px 25px 0 25px; padding: 10px;">
+            <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                <div class="cardPriceSite" style="background-color: #EBF3FF;">
+                    <div style="padding: 20px;">
+                        <h2>Лендинг</h2>
+                        <br>
+                        <h2>от 10.000₽</h2>
+                        <br>
+                        <a onclick="openLeadModal(); return false;" class="classSaas" id="blue">Заказать</a>
+                        <a href="landingPage.html" style="color: black;" class="assasal">Подробнее</a>
+                    </div>
+                    <br>
+                    <div class="contentMaker">
+                        <p>Одностраничный сайт для быстрых продаж «здесь и сейчас» без лишней информации. Только фокус на покупку или заявку.</p>
+                        <ul>
+                            <li><b>Цель:</b> Превратить посетителя в покупателя за один экран.</li>
+                            <li><b>Фишка:</b> Чистая психология продаж и горячие предложения</li>
+                            <li style="text-decoration: underline;"><b>Для кого:</b> Реклама, сезонный товар, инфопродукты, мероприятия.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cardPriceSite" style="background-color: #000000;">
+                    <div style="padding: 20px;">
+                        <h2 style="color: white;">Визитка</h2>
+                        <br>
+                        <!-- <h2 class="salles">От 8.000₽</h2> -->
+                        <h2 style="color: white;">от 7.000₽</h2>
+                        <br>
+                        <a onclick="openLeadModal(); return false;" class="classSaas" id="whitee">Заказать</a>
+                        <a href="vizitka.html" style="color: white;" class="assasal">Подробнее</a>
+                    </div>
+                    <br>
+                    <div class="contentMaker">
+                        <p>Компактный сайт на 3–5 страниц, который официально представляет вас или компанию в сети и спокойно формирует доверие.</p>
+                        <ul>
+                            <li><b>Цель:</b> Показать, кто вы, что умеете и где вас найти.</li>
+                            <li><b>Фишка:</b> Работает на личный бренд и солидную репутацию.</li>
+                            <li style="text-decoration: underline;"><b>Для кого:</b> Специалисты (юристы, врачи, дизайнеры), салоны красоты, автосервисы.</li>
+                        </ul>                 
+                    </div>
+                </div>
+                
+
+                <div class="cardPriceSite" style="background-color: #F2F4F7;">
+                    <div style="padding: 20px;">
+                        <h2>Корпоративный</h2>
+                        <br>
+                        <h2>от 20.000₽</h2>
+                        <br>
+                        <a onclick="openLeadModal(); return false;" class="classSaas" id="blue">Заказать</a>
+                        <a href="corporate.html" style="color: black;" class="assasal">Подробнее</a>
+                    </div>
+                    <br>
+                    <div class="contentMaker">
+                        <p>Большой портал с разветвленной структурой, блогом и сложными интеграциями для автоматизации крупного бизнеса.</p>
+                        <ul>
+                            <li><b>Цель:</b> Продажа B2B (Бизнес для бизнеса) или B2C (Бизнес для потребителя)</li>
+                            <li><b>Фишка:</b> Полноценный инструмент для продвижения в поисковиках (SEO).</li>
+                            <li style="text-decoration: underline;"><b>Для кого:</b> Средний и крупный бизнес, заводы, застройщики, медцентры.</li>
+                        </ul> 
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <div class="systemPAY">
+                <p>Платите любым удобным способом</p>
+                <div class="imagaPay">
+                    <img src="mamka/social/MCard.webp" alt="">
+                    <img src="mamka/social/Vcard.webp" alt="">
+                    <img src="mamka/social/MiCard.webp" alt="">
+                    <img src="mamka/social/TCard.webp" alt="">
+                    <img src="mamka/social/SBP.webp" alt="">
+                </div>
+            </div>
+            <br>
+
+            <div class="consult-box">
+                <div class="consult-text">
+                    <p>Не уверены что Сайт под ключ вам подойдет? Есть вопросы?</p>
+                    <p>Расскажем всё на консультации</p>
+                </div>
+
+                <a onclick="openLeadModal(); return false;" target="_blank" class="help-button">
+                    <img src="mamka/what.webp" alt="Telegram" width="30px">
+                    <p>Консультация</p>
+                </a>
+            </div>
+
+            <br>
+
+            <br>
+
+
+            <h2 align="center">Дополнительные услуги</h2>
+            <p align="center">Полный список опций и честные цены на доработку вашего проекта.</p>
+
+            <div class="table-scroll domain-table-scroll">
+                <table class="price-table domain-table" aria-label="Дополнительные услуги">
+                    <thead>
+                        <tr class="no-borders">
+                            <th style="text-align: left; font-size: 30px;">Услуга</th>
+                            <th style="text-align: center; width: 150px;">Цена</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="sas-info-row" 
+                            data-title="Адрес сайта (Домен)" 
+                            data-desc="Домен — это адрес вашего бизнеса в интернете, как номер офиса или дома на карте (например, moy-biznes.ru). Если его не оплатить, клиенты просто не найдут вход и сайт перестанет открываться." 
+                            data-img="mamka/example/1ex.webp" 
+                            data-plans="no,yes,yes">
+                            <td>Продлить адрес сайта на год <span class="sas-question-mark">?</span></td>
+                            <td style="text-align: center;">от 200₽</td>
+                        </tr>
+
+                        <tr class="sas-info-row" 
+                            data-title="Продвижение сайта" 
+                            data-desc="Если вы хотите, чтобы ваш сайт понравился Google или Yandex и они вас продвигали в ТОП по поиску, то доверьте это дело нам!" 
+                            data-img="mamka/example/2ex.webp" 
+                            data-plans="no,no,no">
+                            <td>Поисковая оптимизация <span class="sas-question-mark">?</span></td>
+                            <td style="text-align: center;">от 20.000₽</td>
+                        </tr>
+
+                        <tr class="sas-info-row" 
+                            data-title="Аренда места (UCloud)" 
+                            data-desc="Хостинг — это как ежемесячная коммуналка. Это «земля», на которой стоит ваш сайт. Мы используем свои серверы, чтобы ваш «дом» не тормозил и выдерживал наплыв толпы клиентов." 
+                            data-img="mamka/example/3ex.webp" 
+                            data-plans="yes,yes,yes">
+                            <td>UCloud Хостинг (1 месяц) <span class="sas-question-mark">?</span></td>
+                            <td style="text-align: center;">200₽</td>
+                        </tr>
+
+                        <tr class="sas-info-row" 
+                            data-title="Косметический ремонт" 
+                            data-desc="Если у вас поменялся номер телефона, адрес или цена на услугу — мы всё быстро подправим. Это как освежить вывеску на входе, чтобы информация всегда была актуальной." 
+                            data-img="mamka/example/4ex.webp" 
+                            data-plans="yes,yes,yes">
+                            <td>Мелкие правки (1шт.)<span class="sas-question-mark">?</span></td>
+                            <td style="text-align: center;">200₽</td>
+                        </tr>
+
+                        <tr class="sas-info-row" 
+                            data-title="Фирменный значок" 
+                            data-desc="Та самая маленькая иконка на вкладке браузера. С ней ваш сайт выглядит солидно и не теряется среди кучи других открытых вкладок у пользователя." 
+                            data-img="mamka/example/5ex.webp" 
+                            data-plans="no,yes,yes">
+                            <td>Фав иконка <span class="sas-question-mark">?</span></td>
+                            <td style="text-align: center;">100₽</td>
+                        </tr>
+
+                        <tr class="sas-info-row" 
+                            data-title="Фирменный значок" 
+                            data-desc="Активная кнопка в углу экрана, которая плавно скроллит сайт наверх и открывает меню мгновенной связи (Звонок, Telegram, WhatsApp) при клике. Адаптирована под мобильные устройства." 
+                            data-img="mamka/example/6ex.webp" 
+                            data-plans="no,yes,yes">
+                            <td>Виджет связи <span class="sas-question-mark">?</span></td>
+                            <td style="text-align: center;">500₽</td>
+                        </tr>
+
+                        <tr class="sas-info-row" 
+                            data-title="Безопасный вход (SSL)" 
+                            data-desc="Это цифровой замок. Он вешает значок замочка в браузере. Без него браузеры будут пугать клиентов надписью «Сайт опасен», а с ним — полное доверие." 
+                            data-img="mamka/example/7ex.webp" 
+                            data-plans="yes,yes,yes">
+                            <td>SSL сертификат <span class="sas-question-mark">?</span></td>
+                            <td style="text-align: center;">500₽</td>
+                        </tr>
+
+                        <tr class="sas-info-row" 
+                            data-title="Юридическая защита" 
+                            data-desc="Официальная бумага для проверок. По закону РФ (152-ФЗ), если вы берете даже имя клиента, нужна эта политика, иначе можно влететь на крупный штраф." 
+                            data-img="mamka/example/8ex.webp" 
+                            data-plans="no,no,yes">
+                            <td>Политика конфиденциальности <span class="sas-question-mark">?</span></td>
+                            <td style="text-align: center;">500₽</td>
+                        </tr>
+
+                        <tr class="sas-info-row" 
+                            data-title="Указатель на карте" 
+                            data-desc="Встроим интерактивную карту прямо в сайт. Клиенту не придется копировать адрес — он сразу увидит, как к вам доехать или дойти." 
+                            data-img="mamka/example/9ex.webp" 
+                            data-plans="no,no,yes">
+                            <td>Интеграция Яндекс Карт <span class="sas-question-mark">?</span></td>
+                            <td style="text-align: center;">300₽</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="sasServiceModal" class="sas-modal-overlay">
+                <div class="sas-modal-content">
+                    <span class="sas-close">&times;</span>
+                    <h2 id="sasModalTitle">Услуга угуга</h2>
+                    <img id="sasModalImg" src="mamka/example/worma.webp" alt="Пример съел червячок worma" style="width:100%; border-radius:10px; margin: 15px 0;">
+                    <p id="sasModalDesc">Какое-то описание для чего-то</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2 align="center">Disite — быстрая разработка сайтов для старта бизнеса</h2>
+    <p align="center">Проект команды UDay. Создаем простые, быстрые и недорогие сайты, которые сразу готовы приводить вам клиентов. Никакой переплаты за лишние функции.</p>
+
+    <div style="margin: 70px 25px 0 25px;">
+
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+
+            <div class="rdr" style="background-color: #00a4b2; border: none;">
+                <img src="mamka/rocket.webp" alt="Опыт работы" style="background-color: white;">
+                <h2 style="color: white;">4 года</h2>
+                <p style="color: white;">Профессионально создаем IT-продукты с 2022 года. Пишем чистый код, запускаем стабильные проекты и отвечаем за финальный результат.</p>
+            </div>
+
+            <div class="rdr">
+                <img src="mamka/card.webp" alt="Разработка">
+                <h2>Ручная работа</h2>
+                <p>Никаких скучных шаблонов и конструкторов. Пишем код вручную под вашу задачу - сайт будет летать на любых устройствах и сразу понравится вашим клиентам.</p>
+            </div>
+
+            <div class="rdr">
+                <img src="mamka/love.webp" alt="Надежность">
+                <h2>С заботой</h2>
+                <p>Мы искренне любим то, что делаем. В каждый проект мы вкладываем максимум усилий, уделяя внимание каждой строчке кода и каждому пикселю.</p>
+            </div>
+
+
+        </div>
+
+    </div>
+    <br>
+    <br>
+
+    <h2 align="center">Частые вопросы</h2>
+    <p align="center">Узнайте вопрос не дожидаясь ответа оператора</p>
+
+
+    <div class="magaga">
+
+        <div class="cardWhat">
+            <h3>Что нужно будет оплачивать в будущем?</h3>
+            <p>Сайт не может существовать сам по себе. Даже если при запуске вы получили домен или хостинг в подарок, через время их нужно будет продлевать:</p>
+            <ul>
+                <li>Домен (имя сайта): Аренда адреса в сети (например, vash-biznes.ru). Стоит от 200 рублей в год.</li>
+                <li>Хостинг (сервер): Место, где хранятся файлы и код сайта, чтобы он работал 24/7. Стоит примерно 300 рублей в месяц.</li>
+            </ul>
+        </div>
+        
+        <div class="cardWhat">
+            <h3>Могу ли я самостоятельно менять что-то на сайте?</h3>
+            <p>Да. Если вы знаете базовый HTML, то сможете без проблем править код — мы отдаем проект с чистой и понятной структурой. Если навыков или времени нет, просто доверьте это нам: мы оперативно внесем любые правки под ваши задачи.</p>
+        </div>
+        <div class="cardWhat">
+            <h3>Будет ли сайт адаптирован под мобильные телефоны?</h3>
+            <p>Конечно. Мы ювелирно настраиваем верстку под любые устройства: смартфоны, планшеты, ноутбуки и огромные мониторы. Сайт будет открываться мгновенно, а интерфейс останется удобным на любом экране.</p>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <footer>
+
+        <div class="footer">
+            <div style="flex-wrap: wrap; display: flex; gap: 30px;">
+                <div style="justify-content: center;">
+                    <h2>Продукты</h2>
+                    <a href="UCloudHost.html">Хостинговое ПО</a>
+                    <a href="UCloudHost.html">UCloud</a>
+                    <a id="NF">Бесплатные API</a>
+                    <a href="https://dmitryuday.github.io/ABartaj/index.html">ABartaj</a>
+                    <a id="NF">Защита от DoS</a>
+                    <a id="NF">Антивирус Machine Sheeld</a>
+                </div>
+
+                <div style="justify-content: center;">
+                    <h2>Создание сайтов</h2>
+                    <a href="vizitka.html">Сайт-визитка</a>
+                    <a href="landingPage.html">Лендинг Пейдж</a>
+                    <a href="corporate.html">Корпоративный сайт</a>
+                    <a id="NF">Интернет магазин</a>
+                    <a id="NF">Сайт под ключ</a>
+                </div>
+
+                <div style="justify-content: center;">
+                    <h2>SEO</h2>
+                    <a id="NF">Продвижение</a>
+                    <a id="NF">Оптимизация</a>
+                    <a id="NF">Оптимизация под нейросети</a>
+                    <a href=""></a>
+                    <a href=""></a>
+                </div>
+
+                <div style="justify-content: center;">
+                    <h2>Полезное</h2>
+
+                    <a onclick="openRekvizityModal(); return false;" style="cursor: pointer;">Реквизиты</a>
+                    <a href="https://dmitryuday.github.io/UDay/pdf/%D0%9F%D1%83%D0%B1%D0%BB%D0%B8%D1%87%D0%BD%D0%B0%D1%8F%20%D0%BE%D1%84%D0%B5%D1%80%D1%82%D0%B0%20Disite.pdf">Публичная оферта</a>
+                    <a href="https://dmitryuday.github.io/UDay/reestr.html">Документы(реестр UDay)</a>
+                    <a href="https://dmitryuday.github.io/UDay/pdf/%D0%9F%D0%BE%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0Disite.pdf">Политика конфиденциальности</a>
+                    <a href="tg://resolve?domain=RUdolphuFeedBack_bot">Сообщить о проблеме</a>
+                    <a href="https://dmitryuday.github.io/UDay/">Сайт UDay</a>
+                </div>
+
+                <div style="justify-content: center;">
+                    <h2>Студия</h2>
+                    <a href="about.html">О нас</a>
+                    <a id="NF">Портфолио</a>
+                    <a onclick="openContactSphere(); return false;">Контакты</a>
+                    <a href="blog.html">Блог</a>
+                    <a id="NF">Отзывы клиентов</a>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="sas">
+
+                <div class="bp">
+                    <a href="tg://resolve?domain=Manager_Disite" style="text-decoration: underline;">Менеджер</a>
+                    <i style="color: white;">Отвечает быстро</i>
+                </div>
+                <br>
+                <div class="bp">
+                    <a href="tg://resolve?domain=RUdolphuFeedBack_bot" style="text-decoration: underline;">Бот отзывов</a>
+                    <i style="color: white;">Оставьте свой отзыв о сервисе</i>
+                </div>
+                <br>
+                <div>
+                    <div style="display: flex; gap:10px;" class="btn">
+                        <a href="https://vk.ru/club239700307" class="blue"><img src="mamka\social\vkIcon.webp" alt="иконка вк" width="50px"></a>
+                        <a href="https://t.me/zakazati_sait" class="blueW"><img src="mamka\social\tgIcon.webp" alt="иконка телеграм" width="50px"></a>
+                        <a href="https://dzen.ru/disite_studio?share_to=link" class="black"><img src="mamka\social\whatsAppIcon.webp" alt="иконка вацап" width="50px"></a>
+                    </div>
+                    <div style="display: flex; gap:10px;" class="btn">
+                        <a href="https://github.com/DmitryUDay" class="black"><img src="mamka\social\githubIcon.webp" alt="иконка гитхаб" width="50px"></a>
+                        <a href="404.html" class="red"><img src="mamka\social\youtubeIcon.webp" alt="иконка ютюб" width="50px"></a>
+                        <a href="404.html" class="black"><img src="mamka\social\tiktokIcon.webp" alt="иконка тикток" width="50px"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div style="display: flex; justify-content: space-between;">
+            <p style="color: #CBD5E0;">© 2026 Disite Studio. Все права защищены.</p>
+            <a href="https://dmitryuday.github.io/UDay/" style="color: #CBD5E0; text-decoration: underline;">Проект UDay Develoop</a>
+        </div>
+
+    </footer>
+
+    <button id="scrollToTop" title="Наверх"><i class="fas fa-chevron-up" id="circi"></i><p>Наверх</p></button>
+
+    <button id="chatButton" onclick="openLeadModal(); return false;" target="_blank" title="Открыть чат"><i class="fas fa-comments" style="color: white;"></i></button>
+
+
+
+
+
+    <div id="nfModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-icon"><img src="https://dmitryuday.github.io/UDay/img/anima.gif" alt="анимация ошибки" width="70%"></div>
+            <h2 class="modal-title">Опаньки</h2>
+            <p class="modal-message" >
+                К сожалению, эта страница временно недоступна.
+                Мы уже исправляем проблему.<br>
+                Если вопрос срочный, свяжитесь с <br> <a onclick="lambdaOpen()" style="color: #3498db;">службой поддержки</a>.
+
+            </p>
+            <button class="modal-button" onclick="closeModal()">Понятно</button>
+        </div>
+    </div>
+
+<div id="contactSphere" class="glassContainer">
+  <div class="crystalOverlay"></div>
+  <div class="aquaDialog">
+    <button class="crystalClose" id="clClosee">×</button>
+    <h2 class="oceanTitle">Выберите вариант связи</h2>
+    <div class="waveOptions">
+      <a href="tg://resolve?domain=Manager_Disite" target="_blank" class="rippleOption">
+        <i class="fab fa-telegram"></i>
+        <span class="flowText">Telegram</span>
+      </a>
+      <a href="https://vk.ru/club239700307" target="_blank" class="rippleOption">
+        <i class="fab fa-vk"></i>
+        <span class="flowText">VK</span>
+      </a>
+      <a href="https://wa.me/79881892838" target="_blank" class="rippleOption">
+        <i class="fab fa-whatsapp"></i>
+        <span class="flowText">WhatsApp</span>
+      </a>
+      <div class="rippleOption rippleDisabled">
+        <i class="fas fa-robot"></i>
+        <span class="flowText">TG Бот</span>
+        <span class="soonBadge">скоро</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div id="wizardModal" class="wizard-overlay">
+    <div class="wizard-card">
+        <button class="wizard-close" onclick="closeWizard()">&times;</button>
+        
+        <div class="wizard-header">
+            <h2 class="wizard-title">Мастер настроек</h2>
+            <p class="wizard-subtitle">Чем могу помочь?</p>
+        </div>
+
+        <div class="wizard-options">
+            <a href="helpSite.html" class="wizard-item">
+                <div class="wizard-icon-box">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <div class="wizard-text">
+                    <span class="wizard-label">Настройка сайта</span>
+                    <span class="wizard-desc">Домен, хостинг, обновление</span>
+                </div>
+                <i class="fas fa-chevron-right wizard-arrow"></i>
+            </a>
+
+            <a href="setup-domain.html" class="wizard-item">
+                <div class="wizard-icon-box">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <div class="wizard-text">
+                    <span class="wizard-label">Индексирование</span>
+                    <span class="wizard-desc">Статистика посещаемости и видимость в поиске</span>
+                </div>
+                <i class="fas fa-chevron-right wizard-arrow"></i>
+            </a>
+
+            <a href="setup-ucloud.html" class="wizard-item">
+                <div class="wizard-icon-box ucloud-accent">
+                    <i class="fas fa-server"></i>
+                </div>
+                <div class="wizard-text">
+                    <span class="wizard-label">Сервер UCloud</span>
+                    <span class="wizard-desc">Настроить UCloud или получить UOS</span>
+                </div>
+                <i class="fas fa-chevron-right wizard-arrow"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- ОСНОВНАЯ МОДАЛКА ЗАКАЗА -->
+<div id="sasLeadModalOverlay" class="sas-lead-overlay">
+  <div class="sas-lead-content">
+    <button onclick="closeLeadModal()" class="sas-lead-close">&times;</button>
+
+    <h2 style="margin: 0 0 15px 0; color: #222;">Заказать сайт</h2>
+    
+    <form id="sasLeadForm" autocomplete="off">
+        <div class="sas-lead-group">
+            <input type="text" id="sasName" name="name" placeholder=" " required>
+            <label for="sasName">Ваше имя</label>
+        </div>
+
+        <div class="sas-lead-group">
+            <input type="text" id="sasContact" name="contact" placeholder=" " required>
+            <label for="sasContact">Телефон / Telegram / Email</label>
+        </div>
+
+        <div class="sas-lead-group">
+            <textarea id="sasMessage" name="message" rows="3" placeholder=" "></textarea>
+            <label for="sasMessage">Пожелания к проекту</label>
+        </div>
+
+        <button type="submit" id="sasLeadSubmitBtn" class="sas-lead-submit">
+            <span class="btn-text">Отправить заявку</span>
+            <span class="btn-spinner"></span>
+        </button>
+        <p class="policySendii">
+            Нажимая кнопку «Отправить заявку», вы даёте согласие на обработку своих персональных данных в соответствии с 
+            <a href="https://dmitryuday.github.io/UDay/pdf/%D0%9F%D0%BE%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0Disite.pdf" target="_blank">Политикой конфиденциальности</a>
+        </p>
+    </form>
+
+    <div class="buttonSocial">
+      <div class="btnSocSend">
+        <a href="https://t.me/Manager_Disite"><img src="mamka/social/tgIcon.webp" alt="TG" class="whiteIcons"></a>
+      </div>
+      <div class="btnSocSend">
+        <a href="https://max.ru/join/bd5VgkCYsEJRKg8mtF-tIuv-vICw0paNbUig97ygRlk"><img src="mamka/social/maxim.webp" alt="Max" class="whiteIcons"></a>
+      </div>
+      <div class="btnSocSend">
+        <a href="https://vk.ru/disite_studio"><img src="mamka/social/vkIcon.webp" alt="VK" class="whiteIcons"></a>
+      </div>
+      <div class="btnSocSend">
+        <a href="https://wa.me/79881892838"><img src="mamka/social/wakawaka.webp" alt="WA" class="whiteIcons"></a>
+      </div>
+      <div class="btnSocSend">
+        <a href="mailto:disitedigitalstudio@gmail.com"><img src="mamka/social/email.webp" alt="Email" class="whiteIcons"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- МОДАЛКА СТАТУСА (УСПЕХ / ОШИБКА / СЕТЬ) -->
+<div id="sasStatusModalOverlay" class="sas-lead-overlay">
+  <div class="sas-lead-content sas-status-content">
+    <button onclick="closeStatusModal()" class="sas-lead-close">&times;</button>
+    
+    <!-- Иконка Успеха -->
+    <div id="statusIconSuccess" class="status-icon icon-success" style="display: none;">
+      <svg viewBox="0 0 52 52">
+        <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+        <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+      </svg>
+    </div>
+
+    <!-- Иконка Ошибки (Красный крест) -->
+    <div id="statusIconError" class="status-icon icon-error" style="display: none;">
+      <svg viewBox="0 0 52 52">
+        <circle class="cross-circle" cx="26" cy="26" r="25" fill="none"/>
+        <path class="cross-path" fill="none" d="M16 16 L36 36 M36 16 L16 36"/>
+      </svg>
+    </div>
+
+    <!-- Иконка Ошибки Сети (Оранжевый треугольник) -->
+    <div id="statusIconNetwork" class="status-icon icon-network" style="display: none;">
+      <svg viewBox="0 0 52 52">
+        <path class="triangle-path" fill="none" d="M26 6 L48 44 L4 44 Z"/>
+        <line x1="26" y1="18" x2="26" y2="30" class="triangle-mark"/>
+        <circle cx="26" cy="37" r="2" class="triangle-dot"/>
+      </svg>
+    </div>
+
+    <h3 id="statusTitle" class="status-title"></h3>
+    <p id="statusDesc" class="status-desc"></p>
+  </div>
+</div>
+
+
+
+<!-- Модальное окно с реквизитами -->
+<div id="rekvizityModal" class="sas-modal-overlay">
+    <div class="sas-modal-content">
+        <span class="sas-close" id="rekvizityClose">&times;</span>
+        <h2 id="rekvizityTitle" style="color: #222; margin-bottom: 20px;">Реквизиты студии</h2>
+        
+        <div class="contanter">
+            <div class="lineDesizgnRequiz">
+                <p style="margin: 5px 0; color: #333;"><strong>Самозанятый</strong> Южаков Дмитрий Евгеньевич</p>
+                <div class="brbrPatapimRequizits"></div>
+                <p style="margin: 5px 0; color: #555;">ИНН: 231846763233</p>
+                <div class="brbrPatapimRequizits"></div>
+                <p style="margin: 5px 0; color: #333;"><strong>Регион деятельности:</strong></p>
+                <p style="margin: 5px 0; color: #555;">Краснодарский край г.Сочи</p>
+                <div class="brbrPatapimRequizits"></div>
+                <p style="margin: 5px 0; color: #333;"><strong>Контакты для связи:</strong></p>
+                <p style="margin: 5px 0; color: #555;">📞 <a href="tel:+7 (988) 189-28-38">+7 (988) 189-28-38</a></p>
+                <p style="margin: 5px 0; color: #555;">📧 <a href="mailto:Dimas05.08.09@yandex.ru">Dimas05.08.09@yandex.ru</a></p>
+            </div>
+            <br>
+            <div class="lineDesizgnRequiz">
+                <p style="margin: 5px 0; color: #333;"><strong>Самозанятый</strong> Осипов Дмитрий Сергеевич</p>
+                <div class="brbrPatapimRequizits"></div>
+                <p style="margin: 5px 0; color: #555;">ИНН: 236401250204</p>
+                <div class="brbrPatapimRequizits"></div>
+                <p style="margin: 5px 0; color: #333;"><strong>Регион деятельности:</strong></p>
+                <p style="margin: 5px 0; color: #555;">Краснодарский край г.Кропоткин</p>
+                <div class="brbrPatapimRequizits"></div>
+                <p style="margin: 5px 0; color: #333;"><strong>Контакты для связи:</strong></p>
+                <p style="margin: 5px 0; color: #555;">📞 <a href="tel:+7 (961) 525-95-12">+7 (961) 525-95-12</a></p>
+                <p style="margin: 5px 0; color: #555;">📧 <a href="mailto:d1mastw@yandex.ru">d1mastw@yandex.ru</a></p>
+            </div>
+        </div>
+
+        <button onclick="closeRekvizityModal()" class="allrightRequeiz">Понятно</button>
+    </div>
+</div>
+
+
+
+
+
+<div id="privacy-banner" style="display: none; position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; max-width: 500px; background: #fff; border: 1px solid #00a4b2; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); padding: 20px; z-index: 10000; font-family: sans-serif;">
+    <div style="margin-bottom: 15px; color: #333; font-size: 14px; line-height: 1.4;">
+        Уважаем вашу приватность! Ваше пребывание на сайте означает согласие с <strong>нашими правилами</strong>
+    </div>
+    <div style="display: flex; gap: 10px; justify-content: flex-end;">
+        <a href="https://dmitryuday.github.io/UDay/pdf/policyDisite.pdf" style="text-decoration: none; color: #00a4b2; font-size: 14px; padding: 10px 15px; border: 1px solid #00a4b2; border-radius: 8px; transition: 0.3s;">Что внутри?</a>
+        <button onclick="acceptPrivacy()" style="background: #00a4b2; color: #fff; border: none; padding: 10px 20px; border-radius: 8px; font-size: 14px; cursor: pointer; transition: 0.3s;">Принять</button>
+    </div>
+</div>
+
+
+
+
+
+<script src="js/adaptiveBurger.js"></script> <!-- бургер Меню для телефонов -->
+<script src="js/errorModal.js"></script><!-- Ошибочная ссылка -->
+<script src="js/upBTN.js"></script><!-- Кнопка вверх -->
+<script src="js/modal.js"></script><!-- Кнопка помощи с контактами -->
+<script src="js/cardVzuh.js"></script><!-- какаята хуйня -->
+<script src="js/acceptCookie.js"></script><!-- Окно принятия куки -->
+<script src="js/modalTareffe.js"></script><!-- модалка с подробностями о доп услугах -->
+<script src="js/aboutAnimation.js"></script><!-- Анимации всей страницы -->
+<script src="js/modalWizard.js"></script><!-- Модалка мастера настроек -->
+<script src="js/pechatMachine.js"></script><!-- Анимация печати текста -->
+<script src="js/karousel.js"></script><!-- Каруселька -->
+<script src="js/submitApl.js"></script><!-- Оставить заявку окно -->
+<script src="js/requizits.js"></script><!-- Модалка реквизитов -->
+
+
+
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=110093519', 'ym');
+
+    ym(110093519, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/110093519" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>
+
+
+<script>
+    const preloader = document.getElementById('preloader');
+
+    function hidePreloader() {
+    if (!preloader.classList.contains('loader-hidden')) {
+        preloader.classList.add('loader-hidden');
+    }
+    }
+
+    window.addEventListener('load', hidePreloader);
+
+    setTimeout(hidePreloader, 2000);
+</script>
