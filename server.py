@@ -1,31 +1,18 @@
-from fastapi import FastAPI, Request
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
-# Защита CORS: только твой фронтенд сможет слать запросы
+# Разрешаем браузеру делать запросы с сторонних доменов (GitHub Pages)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "https://disite-studio.pro",
-        "https://www.disite-studio.pro",
-        "http://localhost:3000"
-    ],
+    allow_origins=["*"],  # Можно указать ["https://disite-studio.pro"], если хочешь ограничить доступ
     allow_credentials=True,
-    allow_methods=["*"],
+    allow_methods=["*"],  # Разрешает POST, GET, OPTIONS и т.д.
     allow_headers=["*"],
 )
 
 @app.post("/api/v1/data")
-async def receive_data(request: Request):
-    try:
-        body = await request.json()
-    except Exception:
-        body = (await request.body()).decode("utf-8")
-        
-    print("\n================ NEW API REQUEST ================")
-    print(f"Origin Header: {request.headers.get('origin')}")
-    print(f"Payload Data:  {body}")
-    print("=================================================\n", flush=True)
-    
-    return {"status": "success", "received": body}
+async def receive_data(data: dict):
+    print("Получены данные:", data)
+    return {"status": "success", "received": data}
