@@ -15,7 +15,7 @@ app.add_middleware(
 )
 
 API_KEY = "363564d5479862c56e8ee02772172d90"
-YANDEX_EMAIL = "disitestudiodigital@yandex.ru"  # Куда присылать заявки
+YANDEX_EMAIL = "disiteStudioDigital@yandex.ru"  # Куда присылать заявки
 
 class LeadForm(BaseModel):
     name: str
